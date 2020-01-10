@@ -1,20 +1,20 @@
-TARGET = studentmain
+TARGET = student
 LIBS = -lm
 CC = gcc
 CFLAGS = -g -Wall -I.
 
-.PHONY: clean all default
+.PHONY: clean all default.
 
 default: $(TARGET)
 all: default
 
 HEADERS = student.h
-OBJECTS = $(patsubst %.c, %.o, $(wildcard *.c))
+OBJECTS = student.c
 
 %.o: %.c $(HEADERS)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(TARGET): $(OBJECTS)
+  $(TARGET): $(OBJECTS)
 	$(CC) $^ $(LIBS) -o $@
 
 clean:
