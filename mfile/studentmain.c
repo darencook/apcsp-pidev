@@ -15,7 +15,7 @@ int main()
   printf("How many students do you want to enter?\n");
   fgets(input, 256, stdin);
   sscanf(input, "%d", &num);
-  num = num - 1;
+  num = num;
 
   for(int i = 0; i < num; i++)
   {
