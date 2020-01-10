@@ -1,4 +1,4 @@
-TARGET = student
+TARGET = studentmain
 LIBS = -lm
 CC = gcc
 CFLAGS = -g -Wall -I.
@@ -9,7 +9,7 @@ default: $(TARGET)
 all: default
 
 HEADERS = student.h
-OBJECTS = student.c
+OBJECTS = student.o studentmain.o
 
 %.o: %.c $(HEADERS)
 	$(CC) $(CFLAGS) -c $< -o $@
